@@ -1,6 +1,7 @@
 package in.succinct.bpp.boc.extensions;
 
 import com.venky.core.util.ObjectHolder;
+import com.venky.core.util.ObjectUtil;
 import com.venky.extension.Extension;
 import com.venky.extension.Registry;
 import in.succinct.bpp.core.adaptor.NetworkApiAdaptor;
@@ -8,6 +9,7 @@ import in.succinct.onet.boc.extensions.BecknRegistry;
 import in.succinct.onet.core.adaptor.NetworkAdaptor;
 
 
+@SuppressWarnings("unused")
 public class BocApiAdaptorCreator implements Extension {
     static {
         Registry.instance().registerExtension(NetworkApiAdaptor.class.getName(),new BocApiAdaptorCreator());
@@ -19,7 +21,7 @@ public class BocApiAdaptorCreator implements Extension {
         @SuppressWarnings("unchecked")
         ObjectHolder<NetworkApiAdaptor> h = (ObjectHolder<NetworkApiAdaptor>) objects[1];
         if (adaptor instanceof BecknRegistry){
-            NetworkApiAdaptor networkApiAdaptor = new BocApiAdaptor((BecknRegistry) adaptor);
+            NetworkApiAdaptor networkApiAdaptor = new BocApiAdaptor(adaptor);
             h.set(networkApiAdaptor);
         }
 
