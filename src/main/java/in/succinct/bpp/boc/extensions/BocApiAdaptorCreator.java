@@ -3,9 +3,9 @@ package in.succinct.bpp.boc.extensions;
 import com.venky.core.util.ObjectHolder;
 import com.venky.extension.Extension;
 import com.venky.extension.Registry;
-import in.succinct.bpp.core.adaptor.api.NetworkApiAdaptor;
 import in.succinct.onet.boc.extensions.BecknRegistry;
 import in.succinct.onet.core.adaptor.NetworkAdaptor;
+import in.succinct.onet.core.adaptor.NetworkApiAdaptor;
 
 
 @SuppressWarnings("unused")
